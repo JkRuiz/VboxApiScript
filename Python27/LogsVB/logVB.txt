@@ -1,0 +1,12 @@
+2019-01-30 10:28:49.588147 - 0x80bb0007 (The machine 'testVm' is already locked for a session (or being unlocked))
+2019-01-30 10:28:54.590751 - 0x80bb0007 (The machine 'testVm' is already locked for a session (or being unlocked))
+2019-01-30 10:28:59.592347 - 0x80bb0007 (The machine 'testVm' is already locked for a session (or being unlocked))
+2019-01-30 10:29:04.595704 - 0x80bb0007 (The machine 'testVm' is already locked for a session (or being unlocked))
+2019-01-30 10:29:09.597595 - 0x80bb0007 (The machine 'testVm' is already locked for a session (or being unlocked))
+2019-01-30 10:29:14.600485 - 0x80bb0007 (The machine 'testVm' is already locked for a session (or being unlocked))
+2019-01-30 10:29:19.606577 - 0x80bb0007 (The machine 'testVm' is already locked for a session (or being unlocked))
+2019-01-30 10:29:24.608047 - 0x80bb0007 (The machine 'testVm' is already locked for a session (or being unlocked))
+2019-01-30 10:29:29.610575 - 0x80bb0007 (The machine 'testVm' is already locked for a session (or being unlocked))
+2019-01-30 10:29:34.612600 - 0x80bb0007 (The machine 'testVm' is already locked for a session (or being unlocked))
+2019-01-30 10:29:39.615978 - The machine was successfully locked
+2019-01-30 10:29:39.622949 - The machine was successfully unlocked
