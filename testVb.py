@@ -7,13 +7,13 @@ UNREGISTER_VM = 'unregisterVm'  # Done
 REGISTER_VM = 'registerVm'  # Done
 RESTART_EXECUTION = 'restartExecution'  # Done
 CONFIGURE_EXECUTION_HARDWARE = 'configureExecutionHardware'  # Done
-COPY_FILE_ON_EXECUTION = 'copyFileOnExecution'  # Done with erroooorrrrr
+COPY_FILE_ON_EXECUTION = 'copyFileOnExecution'  # Done
 TAKE_EXECUTION_SNAPSHOT = 'takeExecutionSnapshot'  # Done
 DELETE_EXECUTION_SNAPSHOT = 'deleteExecutionSnapshot'  # Done
 CHANGE_EXECUTION_MAC = 'changeExecutionMac'  # Done (missing a test with a real network interface)
 RESTORE_EXECUTION_SNAPSHOT = 'restoreExecutionSnapshot'  # Done
 LIST_VMS = 'listVms'  # Done
-CLONE_IMAGE = 'cloneImage'
+CLONE_IMAGE = 'cloneImage'  # Done
 CHECK_EXECUTIONS = 'checkExecutions'  # Done
 SET_UUID = 'sethduuid'
 
@@ -107,4 +107,4 @@ def copy_file_test():
 
 
 if __name__ == '__main__':
-    copy_file_test()
+    basics_share_lock_test()

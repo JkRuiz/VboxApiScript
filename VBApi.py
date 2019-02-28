@@ -54,10 +54,9 @@ class VBoxApi:
                     print ('The machine is not available for running the command ' + str(command) + ' , waiting...')
                     # If the machine was locked and it threw an exception, wait five seconds and try again
                     time.sleep(5)
-        run_command_in_terminal(Vm, command)
+        return self.run_command_in_terminal(Vm, command)
 
     def run_command_in_terminal(self, Vm, command):
-
         START_EXECUTION = 'startExecution'
         SHOW_INFO = 'showInfo'
         STOP_EXECUTION = 'stopExecution'
