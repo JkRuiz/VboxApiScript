@@ -74,6 +74,7 @@ class VBoxApi:
         CLONE_IMAGE = 'cloneImage'
         CHECK_EXECUTIONS = 'checkExecutions'
         SET_UUID = 'sethduuid'
+        EXECUTE_COMMAND = 'executeCommandInVm'
         SUCCESS = 'Task done successfully'
         ERROR = 'The task couldn\'t be done, error: '
 
@@ -247,5 +248,14 @@ class VBoxApi:
                     return (ERROR + 'unkown')
             else:
                 return (SUCCESS + str(': Command ' + command + ' executed \n'))
-
-        # executeCommandOnExecution() how??
+        elif command == EXECUTE_COMMAND:
+            # In this case Vm can't be the image name, it have to be like [VmName, command, username, password]
+            proc = subprocess.Popen(['VBoxManage guestcontrol ' + Vm[0] + ' ' + Vm[1] + ' --username ' + Vm[2] + ' --password ' + Vm[3]], shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            (stdout, stderr) = proc.communicate()
+            if proc.returncode != 0:
+                if stderr is not None:
+                    return (ERROR + stderr)
+                else:
+                    return (ERROR + 'unkown')
+            else:
+                return (SUCCESS + str(': Command ' + command + ' executed \n'))

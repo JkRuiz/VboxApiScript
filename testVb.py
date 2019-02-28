@@ -16,6 +16,7 @@ LIST_VMS = 'listVms'  # Done
 CLONE_IMAGE = 'cloneImage'  # Done
 CHECK_EXECUTIONS = 'checkExecutions'  # Done
 SET_UUID = 'sethduuid'
+EXECUTE_COMMAND = 'executeCommandInVm'
 
 # Constant with the vm name
 VM_NAME = 'testVm'
@@ -95,7 +96,6 @@ def snapshots_tests():
 
 # Copy file test
 def copy_file_test():
-    # List with parameters of spanshot methods, it has to be [VmName, username, password, host-source, vm-destination]
     VM_ARR = []
     VM_ARR.append(VM_NAME)
     VM_ARR.append('juan')
@@ -106,5 +106,16 @@ def copy_file_test():
     print(vbClass.runCommand(VM_ARR, COPY_FILE_ON_EXECUTION))
 
 
+# Execute command test, si falla puede que toque simplemente desinstalar e instalar el guestcontrol en la VM
+def execute_command_test():
+    VM_ARR = []
+    VM_ARR.append(VM_NAME)
+    VM_ARR.append('run --exe "/bin/ls"')
+    VM_ARR.append('juan')
+    VM_ARR.append('juan123')
+    print(vbClass.runCommand(VM_NAME, START_EXECUTION))
+    print(vbClass.runCommand(VM_ARR, EXECUTE_COMMAND))
+
+
 if __name__ == '__main__':
-    basics_share_lock_test()
+    execute_command_test()
